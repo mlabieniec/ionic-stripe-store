@@ -1,6 +1,17 @@
 # Ionic Stripe Store
 
-An Ionic/Angular based e-commerce/cart system powered by Stripe Products and AWS Amplify.
+An Ionic/Angular based e-commerce/cart system powered by Stripe Products and AWS Amplify. Features include:
+
+ - Angular Material UI
+ - Simple AWS Amplify powered REST API for Stripe interaction
+ - Stripe hosted checkout integration (via AWS Amplify/Lambda)
+ - Fully powered by Stripe Products (no CMS needed)
+ - Full cart system with Angular components using local storage
+
+## ToDo:
+
+ - Account/Authentication (currently just check-out as guest)
+ - Ability to utilize Subscriptions 
 
 # Getting Started
 
