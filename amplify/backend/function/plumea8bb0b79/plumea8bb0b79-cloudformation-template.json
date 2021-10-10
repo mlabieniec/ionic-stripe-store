@@ -12,7 +12,7 @@
     },
     "stripeKey": {
       "Type": "String",
-      "Default": "pk_test_Jw1pjmPtG5YFRUzY3UG3CJB7"
+      "Default": "stripe_key"
     },
     "redirectSuccess": {
       "Type": "String",
