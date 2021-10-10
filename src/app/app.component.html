@@ -1,0 +1,62 @@
+<ion-app>
+
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+
+      <ion-buttons slot="end">
+
+        <ion-row class="social-icons">
+          <ion-col>
+            <ion-icon (click)="gotoFacebook()" name="logo-facebook"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon (click)="gotoInstagram()" name="logo-instagram"></ion-icon>
+          </ion-col>
+        </ion-row>
+
+        <ion-menu-button></ion-menu-button>
+        <app-cart-icon></app-cart-icon>
+      </ion-buttons>
+
+      <ion-title>
+        <a [routerLink]="['/']">
+          <h1 class="brand">{{title}}</h1>
+        </a>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-menu #mainav side="end" content-id="main-content">
+    <ion-header>
+      <ion-toolbar translucent>
+        <ion-title class="menu-logo">
+          <h2>{{title}}</h2>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <ion-list class="nav">
+        <ion-item *ngFor="let item of navigation">
+          <ion-button [routerLink]="[item.link]" fill="clear" color="primary" size="large" expand="block"
+            (click)="mainav.close()">
+            <ion-icon [name]="item.icon" slot="start"></ion-icon> {{item.text}}
+          </ion-button>
+        </ion-item>
+      </ion-list>
+
+      <div class="ion-footer">
+        <ion-row>
+          <ion-col>
+            <small>{{menuFooter}}</small>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-router-outlet></ion-router-outlet>
+  </div>
+
+</ion-app>

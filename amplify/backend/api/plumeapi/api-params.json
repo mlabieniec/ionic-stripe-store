@@ -1,0 +1,43 @@
+{
+    "paths": [
+        {
+            "name": "/checkout",
+            "lambdaFunction": "plumea8bb0b79",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/checkout"
+        },
+        {
+            "name": "/products",
+            "lambdaFunction": "plumea8bb0b79",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/products"
+        }
+    ],
+    "resourceName": "plumeapi",
+    "apiName": "plumeapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "plumea8bb0b79"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-plume-dev-114804-authRole",
+        "unAuthRoleName": "amplify-plume-dev-114804-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "plumea8bb0b79",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+ion-header {
+    img.brand {
+        cursor: pointer;
+        height: 40px;
+    }
+
+    .social-icons {
+        cursor: pointer;
+
+        ion-icon:hover {
+            color: var(--ion-color-primary);
+        }
+    }
+}
+
+ion-button {
+    ion-badge {
+        position: absolute;
+        top: -0.3rem;
+        right: -0.3rem;
+        opacity: 0.9;
+
+        &~ion-icon {
+            margin-right: 1.2rem;
+        }
+    }
+}
+
+ion-list.nav {
+    ion-item {
+        ion-button {
+            width: 100%;
+        }
+    }
+}
+
+.menu-logo {
+    text-align: center;
+
+    img {
+        height: 100px;
+    }
+}
+
+.ion-footer {
+    color: var(--ion-color-secondary);
+    text-align: center;
+}
+
+@media (max-width: 415px) {
+
+
+}

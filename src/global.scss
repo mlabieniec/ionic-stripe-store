@@ -1,0 +1,63 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+div.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+div.ion-page {
+    top: 4em;
+}
+
+.page-heading {
+    padding: 2em;
+    text-align: center;
+}
+
+ion-app.ios {
+    ion-title {
+        padding-left: 1em;
+        text-align: left;
+    }
+    ion-toolbar {
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    div.container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    div.container {
+        width: 50%;
+    }
+}

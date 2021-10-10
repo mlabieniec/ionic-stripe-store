@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-button class="close" (click)="closeModal()" fill="clear" *ngIf="isModal"><ion-icon name="close"></ion-icon></ion-button>
+  <div class="cart">
+    <h1>
+      Your Cart
+      <span *ngIf="items.length === 0">is empty</span>
+    </h1>
+    <ion-list *ngIf="items.length > 0">
+      <ion-item *ngFor="let item of items">
+        <ion-avatar slot="start">
+          <img [src]="item.images[0]">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{item.name}}</h2>
+          <h3>{{item.price | stripe | currency:'$' : 'symbol' : '1.2'}}</h3>
+        </ion-label>
+        <ion-button (click)="remove(item)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    <ion-button *ngIf="items.length > 0" (click)="checkout()">
+      <ion-icon name="cart"></ion-icon> &nbsp;
+      Checkout
+    </ion-button>
+    <p class="error">{{error}}</p>
+  </div>
+</ion-content>

@@ -1,0 +1,5 @@
+<ion-button mat-icon-button (click)="showCart()">
+  <ion-icon name="cart" size="large"></ion-icon>
+  <ion-badge *ngIf="numItems > 0" [class.badge-one]="numItems < 10" [class.badge-two]="numItems >= 10" color="warning">
+    {{numItems}}</ion-badge>
+</ion-button>

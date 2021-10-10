@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-plume-dev-114804-authRole",
+      "UnauthRoleArn": "arn:aws:iam::507465875706:role/amplify-plume-dev-114804-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::507465875706:role/amplify-plume-dev-114804-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-plume-dev-114804-deployment",
+      "UnauthRoleName": "amplify-plume-dev-114804-unauthRole",
+      "StackName": "amplify-plume-dev-114804",
+      "StackId": "arn:aws:cloudformation:us-east-2:507465875706:stack/amplify-plume-dev-114804/7f849b00-2ce2-11eb-a892-0611fd7a7fc8",
+      "AmplifyAppId": "d24p9pywu96wuv"
+    },
+    "categories": {
+      "function": {
+        "plumea8bb0b79": {
+          "deploymentBucketName": "amplify-plume-dev-114804-deployment",
+          "s3Key": "amplify-builds/plumea8bb0b79-47634249725744534f39-build.zip"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<ion-content>
+  <div class="container home">
+    <ion-text class="page-heading" color="primary">
+      <h1>My Awesome Stripe Store</h1>
+    </ion-text>
+
+    <div *ngIf="featuredProducts && featuredProducts.length > 0">
+      <ion-card *ngFor="let product of featuredProducts">
+        <ion-img [src]="getMainImage(product)"></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{product.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{product.description}}
+        </ion-card-content>
+        <ion-item>
+          <app-addtocart [product]="product" slot="end"></app-addtocart>
+        </ion-item>
+      </ion-card>
+    </div>
+  </div>
+
+</ion-content>
