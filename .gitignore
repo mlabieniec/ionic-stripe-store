@@ -31,9 +31,9 @@ npm-debug.log*
 /www
 
 ## stripe keys are in these files
-src/environments/environment.ts
-src/environments/environment.prod.ts
-amplify/backend/function/plumea8bb0b79/plumea8bb0b79-cloudformation-template.json
+environment.ts
+environment.prod.ts
+plumea8bb0b79-cloudformation-template.json
 
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
