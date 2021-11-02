@@ -25,8 +25,8 @@ export interface Product {
   price?: any
 }
 
-export const PRODUCT_TYPE_ONE_TIME = "one_time";
-export const PRODUCT_TYPE_SUBSCRIBE = "subscription";
+export const PRODUCT_TYPE_ONE_TIME = 'one_time';
+export const PRODUCT_TYPE_SUBSCRIBE = 'subscription';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +34,7 @@ export const PRODUCT_TYPE_SUBSCRIBE = "subscription";
 export class StripeService {
   
   stripe:any;
-  apiName = "plumeapi";
+  apiName = 'plumeapi';
 
   constructor() { 
     this.init();
@@ -50,9 +50,9 @@ export class StripeService {
     products.forEach((product) => {
       payload.push({
         price_data: {
-          currency: 'usd',
-          product: product.id,
-          unit_amount: product.price
+          "currency": 'usd',
+          "product": product.id,
+          "unit_amount": product.price
         },
         quantity: 1
       });
@@ -67,7 +67,11 @@ export class StripeService {
     }
   }
 
-  async products(): Promise<any> {
-    return await API.get(this.apiName, '/products', {});
+  async products(limit:number = 3): Promise<any> {
+    return await API.get(this.apiName, '/products', {
+      queryStringParameters: {
+        "limit": limit
+      }
+    });
   }
 }

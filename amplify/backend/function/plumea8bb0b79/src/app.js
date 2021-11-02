@@ -36,13 +36,10 @@ app.post('/checkout', async function(req, res) {
 
 app.get('/products', async function(req,res) {
   let result = {};
+  let params = req.params || { limit: 3 };
   try {
-    let products = await stripe.products.list({
-      limit: 3,
-    });
-    let prices = await stripe.prices.list({
-      limit: 3
-    });
+    let products = await stripe.products.list(params);
+    let prices = await stripe.prices.list(params);
     products.data.map((product) => {
       prices.data.forEach(price => {
         if (price.product === product.id) product.price = price;
