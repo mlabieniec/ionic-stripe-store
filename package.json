@@ -30,7 +30,7 @@
     "@ionic/angular": "^5.0.0",
     "@stripe/stripe-js": "^1.11.0",
     "@types/stripe-v3": "^3.1.26",
-    "aws-amplify": "^3.3.7",
+    "aws-amplify": "^4.3.25",
     "contentful": "^7.14.14",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
